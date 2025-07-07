@@ -10,4 +10,4 @@ WORKDIR /app
 EXPOSE 6080
 
 CMD python3 -m http.server 6080 & \
-    tmate -F
+    tmate 
