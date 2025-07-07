@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM debian:12
 
 # Install dependencies
 RUN apt update && apt install software-properties-common wget curl git openssh-client tmate python3 sudo neofetch -y && apt clean
@@ -8,6 +8,6 @@ WORKDIR /app
 
 # Expose a fake web port to trick Railway into keeping container alive
 EXPOSE 6080
-m
+
 CMD python3 -m http.server 6080 & \
     tmate -F
